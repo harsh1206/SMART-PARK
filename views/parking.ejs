@@ -1,0 +1,208 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Smart Parking</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fas fa-home fa-2x"></i>
+          <br />
+          Home
+          <!-- <span class="sr-only">(current)</span> -->
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ">
+      <% if(login){ %>
+      <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">
+          <i class="fas fa-user fa-2x"></i>
+          <!-- <span class="badge badge-danger">11</span> -->
+          <br />
+
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/monitor">
+          <i class="fas fa-desktop fa-2x"></i><br />
+          Monitor
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Parking">
+          <i class="fas fa-car fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br />
+          Parking
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br />
+          Logout
+        </a>
+      </li>
+
+      <% } %> <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <br />
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="far fa-registered fa-2x"></i>
+          <br />
+          Register
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mb-0">
+  <h1 class="text-center mt-4" style="color: white;">Parking Slots</h1>
+</div>
+
+<div class="container" style="background-color: white">
+  <div class="mx-auto col-md-4">
+    <% include ./partials/messages %>
+  </div>
+
+  <table class="mx-auto" style="margin: 20px;">
+    <!-- <tr>
+    
+      <td class="rounded px-2 py-2 bg-dark ">XX</td>
+      <td class="rounded px-2 py-2 bg-info ">C1</td>
+      <td class="rounded px-2 py-2 bg-info ">C2</td>
+      <td class="rounded px-2 py-2 bg-info ">C3</td>
+      <td class="rounded px-2 py-2 bg-info ">C4</td>
+      <td class="rounded px-2 py-2 bg-info ">C5</td>
+      <td class="rounded px-2 py-2 bg-info ">C6</td>
+     
+    </tr> -->
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
+      <td>
+        <button type="button" class="btn <%=color[1]%>  btn-block ">01</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[2]%>  btn-block ">02</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[3]%>  btn-block ">03</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[4]%>  btn-block ">04</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[5]%>  btn-block ">05</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[6]%>   btn-block ">06</button>
+      </td>
+    </tr>
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
+      <td>
+        <button type="button" class="btn <%=color[7]%>  btn-block ">07</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[8]%>  btn-block ">08</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[9]%>  btn-block ">09</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[10]%>  btn-block ">10</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[11]%>  btn-block ">11</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[12]%>   btn-block ">
+          12
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
+      <td>
+        <button type="button" class="btn <%=color[13]%>  btn-block ">13</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[14]%>  btn-block ">14</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[15]%>  btn-block ">15</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[16]%>  btn-block ">16</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[17]%>  btn-block ">17</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[18]%>  btn-block ">18</button>
+      </td>
+    </tr>
+    <tr>
+      <!-- <th class="rounded px-2 py-2 bg-info d-block">R1</th> -->
+      <td>
+        <button type="button" class="btn <%=color[19]%>  btn-block ">19</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[20]%>  btn-block ">20</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[21]%>  btn-block ">21</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[22]%>  btn-block ">22</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[23]%>  btn-block ">23</button>
+      </td>
+      <td>
+        <button type="button" class="btn <%=color[24]%>  btn-block ">24</button>
+      </td>
+    </tr>
+  </table>
+
+  <form class="col-md-6 m-auto" action="/parking" method="POST" style="margin:10px;padding: 8px;">
+    <div class="form-group">
+      <label for="slot">Slot</label>
+      <input
+        type="text"
+        id="slot"
+        name="slot"
+        class="form-control"
+        placeholder="Enter Slot"
+      />
+    </div>
+    <button type="submit" class="btn btn-info btn-block" style="margin-bottom: 10px;">Book Slot</button>
+  </form>
+</div>
+
+<!-- <div class="footer bg-info">
+  <h2>Parking Management System</h2>
+</div> -->

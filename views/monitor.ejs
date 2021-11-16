@@ -1,0 +1,109 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Smart Parking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fas fa-home fa-2x"></i>
+          <br>
+          Home
+          <!-- <span class="sr-only">(current)</span> -->
+        </a>
+      </li>
+
+
+
+    </ul>
+
+
+    <ul class="navbar-nav ">
+      <% if(login){ %>
+      <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">
+
+          <i class="fas fa-user fa-2x"></i>
+
+          <br>
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/monitor">
+          <i class="fas fa-desktop fa-2x"></i><br>
+          Monitor
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Parking">
+          <i class="fas fa-car fa-2x"></i>
+          <br>
+          Parking
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br>
+          Logout
+        </a>
+      </li>
+      <% } %>
+      <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <br>
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="far fa-registered fa-2x"></i>
+          <br>
+          Register
+        </a>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
+
+<div class="mb-5 bg-light text-center">
+  <h2>Car Details of
+    <%= user.name %>
+  </h2>
+</div>
+<div class="mx-auto col-md-4">
+  <% include ./partials/messages %>
+</div>
+<div class="row mt-5 col-md-6 m-auto card card-body">
+
+  <form method="POST" action="\monitor">
+    <div class="form-group">
+      <label for="RFID">Vehicle Number
+      </label>
+      <input type="text" class="form-control" id="RFID" name="RFID" placeholder="RFID Tag">
+    </div>
+    <div class="form-group">
+      <label for="Model">Vehcile Name</label>
+      <input type="text" class="form-control" id="Model" name="Model" placeholder="Car Model">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-info btn-block">Add</button>
+    </div>
+  </form>
+
+</div>
+
+<!-- <div class="footer bg-info">
+
+  <h2>Parking Management System</h2>
+
+</div> -->

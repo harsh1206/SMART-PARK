@@ -1,0 +1,47 @@
+<% if(login){ %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fa fa-sign-out"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          </i>
+          Logout
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/users/scan">
+          <i class="fa fa-envelope-o">
+            <!-- <span class="badge badge-danger">11</span> -->
+          </i> 
+          scan a
+        </a>
+      </li>
+
+      <% } %>
+      <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fa fa-sign-in">
+            <!-- <span class="badge badge-success">11</span> -->
+          </i>
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="fa fa-user">
+            <!-- <span class="badge badge-success">11</span> -->
+          </i>
+          Register
+        </a>
+      </li>
+      <% } %>
+
+
+
+
+       <h1 class=" text-center mx-auto bg-success d-block col-md-4">
+    <%=slotSuccess%>
+  </h1>
+  <h1 class=" text-center mx-auto bg-danger d-block col-md-4">
+    <%=slotFailure%>
+  </h1>

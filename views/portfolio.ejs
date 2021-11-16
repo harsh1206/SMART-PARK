@@ -1,0 +1,101 @@
+<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-info">
+  <a class="navbar-brand" href="#">Smart Parking</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">
+          <i class="fas fa-home fa-2x"></i>
+          <br>
+          Home
+          <!-- <span class="sr-only">(current)</span> -->
+        </a>
+      </li>
+
+
+
+    </ul>
+
+
+    <ul class="navbar-nav ">
+      <% if(login){ %>
+      <li class="nav-item">
+        <a class="nav-link active" href="/dashboard">
+
+          <i class="fas fa-user fa-2x"></i>
+          <!-- <span class="badge badge-danger">11</span> -->
+          <br>
+
+          Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/monitor">
+          <i class="fas fa-desktop fa-2x"></i><br>
+          Monitor
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Parking">
+          <i class="fas fa-car fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br>
+          Parking
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/logout">
+          <i class="fas fa-sign-out-alt fa-2x"></i>
+          <!-- <span class="badge badge-info">11</span> -->
+          <br>
+          Logout
+        </a>
+      </li>
+
+
+      <% } %>
+      <% if( !login) { %>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/login">
+          <i class="fas fa-sign-in-alt fa-2x"></i>
+          <br>
+          Login
+        </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/users/register">
+          <i class="far fa-registered fa-2x"></i>
+          <br>
+          Register
+        </a>
+      </li>
+      <% } %>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+
+      <h4 style="color:red;">Welcome to Parking Management System </h4>
+      
+      <br>
+
+      <p style="font-family: 'Courier New', Courier, monospace;">In the modern society, there is an ever-increasing number of vehicles. This is leading to problems such as large urban parking lots becoming inefficient, increasing difficulty to find open spaces in busy parking lots, as well as the increasing need to devote larger areas of land for additional parking spaces. Parking management system is developed for automating the functioning of the parking management system of office complexes.</p>
+      <img src="https://advanceaccess.co.uk/wp-content/uploads/2019/03/Cost-Effective-and-User-Friendly-car-parking-system-in-Hospitals.jpg"></img>
+        
+    </div>
+  </div>
+</div>
+<!-- <div class="footer bg-primary">
+
+  <h2>Parking Management System</h2>
+
+</div> -->
